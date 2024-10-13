@@ -2,10 +2,10 @@ package org.registration.controller;
 
 
 import org.hibernate.Session;
-import org.registration.config.HibernateUtil;
 import org.registration.model.Course;
 import org.registration.model.Student;
 import org.registration.model.StudentCourse;
+import org.registration.util.HibernateUtil;
 
 import java.math.BigDecimal;
 

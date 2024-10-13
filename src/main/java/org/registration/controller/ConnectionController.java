@@ -1,7 +1,7 @@
 package org.registration.controller;
 
 import org.hibernate.Session;
-import org.registration.config.HibernateUtil;
+import org.registration.util.HibernateUtil;
 
 
 public class ConnectionController {

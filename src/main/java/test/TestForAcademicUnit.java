@@ -5,10 +5,10 @@ import org.hibernate.Session;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.registration.config.HibernateUtil;
 import org.registration.controller.AcademicUnitController;
 import org.registration.model.AcademicUnit;
 import org.registration.model.EAcademicUnit;
+import org.registration.util.HibernateUtil;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

@@ -1,9 +1,11 @@
 package org.registration.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.math.BigDecimal;
 
+@Data
 @Entity
 public class StudentCourse {
 
@@ -23,48 +25,9 @@ public class StudentCourse {
     @JoinColumn(name = "course_code")
     private Course course;
 
-	public Long getId() {
-		return id;
-	}
+	@ManyToOne
+	@JoinColumn(name = "student_registration_id")
+	private StudentRegistration registration;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Integer getCredits() {
-		return credits;
-	}
-
-	public void setCredits(Integer credits) {
-		this.credits = credits;
-	}
-
-	public BigDecimal getResults() {
-		return results;
-	}
-
-	public void setResults(BigDecimal results) {
-		this.results = results;
-	}
-
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
-	}
-
-	public Course getCourse() {
-		return course;
-	}
-
-	public void setCourse(Course course) {
-		this.course = course;
-	}
-
-    // Getters and setters
-    
-    
     
 }

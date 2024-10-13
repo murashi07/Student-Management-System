@@ -5,11 +5,11 @@ import org.hibernate.Session;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.registration.config.HibernateUtil;
 import org.registration.controller.StudentRegistrationController;
 import org.registration.model.Semester;
 import org.registration.model.Student;
 import org.registration.model.StudentRegistration;
+import org.registration.util.HibernateUtil;
 
 import java.time.LocalDate;
 

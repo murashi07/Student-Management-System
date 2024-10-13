@@ -3,8 +3,8 @@ package org.registration.controller;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.registration.config.HibernateUtil;
 import org.registration.model.Course;
+import org.registration.util.HibernateUtil;
 
 
 public class CourseController {

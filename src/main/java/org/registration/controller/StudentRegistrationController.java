@@ -1,7 +1,7 @@
 package org.registration.controller;
 
 
-import jakarta.persistence.Query;
+import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.registration.model.Semester;

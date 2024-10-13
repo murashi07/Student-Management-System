@@ -4,8 +4,9 @@ package org.registration.controller;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-import org.registration.config.HibernateUtil;
 import org.registration.model.Student;
+import org.registration.util.HibernateUtil;
+
 
 import java.util.List;
 
@@ -27,10 +28,10 @@ public class StudentsPerCourseSemesterController {
 
             // Adjusted HQL query
             String hql = "SELECT sc.student FROM StudentCourse sc " +
-                         "JOIN sc.studentRegistration sr " +
-                         "JOIN sr.semester sem " +
-                         "WHERE sc.course.code = :courseCode " +
-                         "AND sem.name = :semesterName";
+                    "JOIN sc.registration sr " + // Correctly using 'registration'
+                    "JOIN sr.semester sem " +
+                    "WHERE sc.course.code = :courseCode " +
+                    "AND sem.name = :semesterName";
 
             Query<Student> query = session.createQuery(hql, Student.class);
             query.setParameter("courseCode", courseCode);

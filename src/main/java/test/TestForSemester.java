@@ -4,9 +4,12 @@ import org.hibernate.Session;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.registration.config.HibernateUtil;
 import org.registration.controller.SemesterController;
 import org.registration.model.Semester;
+import org.registration.util.HibernateUtil;
+
+import static org.junit.Assert.assertEquals;
+
 
 import java.time.LocalDate;
 

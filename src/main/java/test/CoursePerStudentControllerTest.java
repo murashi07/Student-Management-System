@@ -4,9 +4,9 @@ import org.hibernate.Session;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.registration.config.HibernateUtil;
 import org.registration.controller.CoursePerStudentController;
 import org.registration.model.Course;
+import org.registration.util.HibernateUtil;
 
 
 import java.util.List;
