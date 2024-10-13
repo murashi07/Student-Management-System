@@ -1,16 +1,14 @@
 package org.registration.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 import java.util.HashSet;
 import java.util.Set;
-@Data
+
 @Entity
 public class Teacher {
 
     @Id
-
     private String code;
 
     private String names;
@@ -25,6 +23,40 @@ public class Teacher {
     )
     private Set<Course> courses = new HashSet<>();
 
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public String getNames() {
+		return names;
+	}
+
+	public void setNames(String names) {
+		this.names = names;
+	}
+
+	public String getQualification() {
+		return qualification;
+	}
+
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+
+	public Set<Course> getCourses() {
+		return courses;
+	}
+
+	public void setCourses(Set<Course> courses) {
+		this.courses = courses;
+	}
+
+    // Getters and setters
+    
     
 }
 
