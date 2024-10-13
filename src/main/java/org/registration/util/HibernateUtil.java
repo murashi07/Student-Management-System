@@ -6,6 +6,7 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import java.util.Properties;
+import org.registration.model.*;
 
 public class HibernateUtil {
 
@@ -20,9 +21,9 @@ public class HibernateUtil {
             // Set Hibernate properties programmatically
             Properties properties = new Properties();
             properties.put(Environment.DRIVER, "org.postgresql.Driver");
-            properties.put(Environment.URL, "jdbc:postgresql://localhost:5432/testing02");
+            properties.put(Environment.URL, "jdbc:postgresql://localhost:5432/java_testing_db");
             properties.put(Environment.USER, "postgres");
-            properties.put(Environment.PASS, "A$aprocky08");
+            properties.put(Environment.PASS, "yvan");
             properties.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
 
             // Optional Hibernate settings
@@ -40,14 +41,14 @@ public class HibernateUtil {
             configuration.setProperties(properties);
 
             // Add the annotated entity classes
-            configuration.addAnnotatedClass(model.Student.class);
-            configuration.addAnnotatedClass(model.StudentRegistration.class);
-            configuration.addAnnotatedClass(model.Teacher.class);
-            configuration.addAnnotatedClass(model.Course.class);
-            configuration.addAnnotatedClass(model.CourseDefinition.class);
-            configuration.addAnnotatedClass(model.Semester.class);
-            configuration.addAnnotatedClass(model.StudentCourse.class);
-            configuration.addAnnotatedClass(model.AcademicUnit.class);
+            configuration.addAnnotatedClass(Student.class);
+            configuration.addAnnotatedClass(StudentRegistration.class);
+            configuration.addAnnotatedClass(Teacher.class);
+            configuration.addAnnotatedClass(Course.class);
+            configuration.addAnnotatedClass(CourseDefinition.class);
+            configuration.addAnnotatedClass(Semester.class);
+            configuration.addAnnotatedClass(StudentCourse.class);
+            configuration.addAnnotatedClass(AcademicUnit.class);
 
             // Create ServiceRegistry
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
